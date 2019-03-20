@@ -1,11 +1,8 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 import arrow from './images/arrow2.png';
 import map1 from './images/map1.png';
 import map0 from './images/map0.png';
-
-import html2canvas from 'html2canvas';
 
 
 class App extends Component {
@@ -34,7 +31,7 @@ class App extends Component {
     };
     this.setArrow = (x, y) => {
       var context = this.canvas.getContext('2d');
-      const foo = this.canvas;
+      // const foo = this.canvas;
       var image = new Image();
         image.onload= () => {
           context.drawImage(
@@ -126,7 +123,7 @@ class App extends Component {
           </select>
           <br />
           2 - Click on the map!
-          <canvas id="daro" ref={this.setCanvas} style={{}} onClick={setArrow} />
+          <canvas id="daro" ref={this.setCanvas} width="1000" height="500" onClick={setArrow} />
           <br />
           <div onClick={this.saveScreenShot}>
             <b style={{cursor: 'pointer'}}>3 - click here!</b>
