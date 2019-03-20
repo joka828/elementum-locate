@@ -101,7 +101,7 @@ class App extends Component {
               document.body.appendChild(text);
               text.value = reader.result;
               text.select();
-              alert("Press CTRL+C to copy image to clipboard");
+              // alert("Press CTRL+C to copy image to clipboard");
               document.execCommand('copy');
             }
             reader.readAsDataURL(blob)
@@ -128,7 +128,7 @@ class App extends Component {
           2 - Click on the map!
           <canvas id="daro" ref={this.setCanvas} style={{}} onClick={setArrow} />
           <br />
-          <div onClick={this.saveScreenShot2}>
+          <div onClick={this.saveScreenShot}>
             <b style={{cursor: 'pointer'}}>3 - click here!</b>
           </div>
           {this.state.showInstructions ? (
